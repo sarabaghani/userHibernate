@@ -39,7 +39,7 @@ public abstract class BaseRepository<T extends BaseEntity>  {
         }
     }
 
-    public Optional<T> loadById(ID id) {
+    public Optional<T> loadById(Long id) {
         return Optional.ofNullable(entityManager.find(getEntityClass(), id));
     }
 
